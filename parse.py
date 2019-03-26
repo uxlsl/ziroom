@@ -4,7 +4,7 @@
 # Description   :
 # Author        :
 # Creation Date : 2019-03-26
-# Last Modified : 2019年03月26日 星期二 15时10分16秒
+# Last Modified : 2019年03月26日 星期二 17时04分03秒
 # Created By    : lsl
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -23,7 +23,7 @@ def main():
     plt.show()
     df[(df["职业"] != "…") & (df["职业"] != "...") & (df["职业"] != "未知")][
         "职业"
-    ].value_counts().head().plot.pie()
+    ].value_counts().head(10).plot.pie()
     plt.show()
 
 
