@@ -74,7 +74,7 @@ class ZSpider(scrapy.Spider):
         data = json.loads(response.body_as_unicode())
         image_url = response.urljoin(data['data']['price'][0])
         print(image_url)
-        req = scrapy.Request(image_url, self.parse_image)
+        req = scrapy.Request(image_url, self.parse_image, dont_filter=True)
         current = response.meta['current']
         req.meta['current'] = current
         req.meta['data'] = data
